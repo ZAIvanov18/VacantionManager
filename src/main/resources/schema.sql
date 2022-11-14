@@ -8,3 +8,18 @@ CREATE TABLE Users (
     Team VARCHAR(255) NOT NULL,
     PRIMARY KEY (ID)
 );
+CREATE TABLE Teams (
+    TeamID INTEGER NOT NULL,
+    TeamName VARCHAR(255) NOT NULL,
+    CurrentProject VARCHAR(255) NOT NULL,
+    Developers VARCHAR(255) NOT NULL,
+    CEO VARCHAR(255) NOT NULL,
+    PRIMARY KEY (TeamID)
+);
+CREATE TABLE Project (
+    ProjectID INTEGER NOT NULL,
+    ProjectName VARCHAR(255) NOT NULL,
+    Description VARCHAR(255) NOT NULL,
+    CurrentTeam VARCHAR(255) NOT NULL,
+    PRIMARY KEY (ProjectID)
+);
