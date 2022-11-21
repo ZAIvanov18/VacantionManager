@@ -1,4 +1,4 @@
-package com.example.vacantionmanager.Model;
+package model;
 
 import javax.persistence.*;
 

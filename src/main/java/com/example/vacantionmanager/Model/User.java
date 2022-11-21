@@ -1,9 +1,11 @@
-package com.example.vacantionmanager.Model;
+package model;
 
 import javax.persistence.*;
+
 @Entity
 @Table(name="Users")
 public class User {
+
     @Id
     @GeneratedValue
     private int id;
@@ -17,6 +19,7 @@ public class User {
     private String lastName;
     @Column
     private String role;
+
     public User(int id, String nickname, String password, String firstName, String lastName, String role) {
         this.id = id;
         this.nickname = nickname;
@@ -25,12 +28,25 @@ public class User {
         this.lastName = lastName;
         this.role = role;
     }
-    public User(String nickname, String password, String firstName, String lastName, String role, String team) {
+
+    public User(String nickname, String password, String firstName, String lastName, String role) {
         this.nickname = nickname;
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
         this.role = role;
+    }
+
+    public User() {
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNickname() {
@@ -75,8 +91,9 @@ public class User {
 
     @Override
     public String toString() {
-        return "Users{" +
-                "nickname='" + nickname + '\'' +
+        return "User{" +
+                "id=" + id +
+                ", nickname='" + nickname + '\'' +
                 ", password='" + password + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +

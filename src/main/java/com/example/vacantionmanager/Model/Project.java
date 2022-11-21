@@ -1,9 +1,11 @@
-package com.example.vacantionmanager.Model;
+package model;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "Projects")
 public class Project {
+
     @Id
     @GeneratedValue
     private int projectId;
