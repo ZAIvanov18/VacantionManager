@@ -1,5 +1,6 @@
 package com.example.vacantionmanager;
 
+
 import com.example.vacantionmanager.Model.User;
 import com.example.vacantionmanager.dao.UserRepository;
 import org.slf4j.Logger;
@@ -22,7 +23,7 @@ public class VacationManagerApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        logger.info("Inserting Player 2: {}", userRepository.save(new model.User("Username123", "abc123",
+        logger.info("Inserting Player 2: {}", userRepository.save(new User("Username123", "abc123",
                 "Zhelyazko", "Ivanov", "Admin")));
 
     }
