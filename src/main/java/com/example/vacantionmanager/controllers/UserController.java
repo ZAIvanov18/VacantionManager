@@ -42,6 +42,7 @@ public class UserController {
         if (userRepository.checkPassword(user)) {
             User u2= userRepository.getUserByUsername(user.getUsername());
             maybeCurrUser=u2;
+
             if(u2.getRole().getId()==1) {
                 this.ceo = new CEOuser(u2);
                 return "redirect:/ceopage";

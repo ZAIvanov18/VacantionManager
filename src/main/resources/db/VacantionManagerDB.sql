@@ -235,11 +235,7 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
--- =============================================
--- Author:		e az be koi da e
--- Create date: em dnes mai
--- Description:	hash pass
--- =============================================
+
 CREATE OR ALTER TRIGGER HashPassword
 ON [dbo].[Users]
 INSTEAD OF INSERT
@@ -249,7 +245,7 @@ SET NOCOUNT ON;
 INSERT INTO Users(Username,[Password],FirstName,LastName,RoleID)
 SELECT
     i.Username,
-    CONVERT(varbinary(max),EncryptByPassPhrase('iskam_6_za_bazata_moje_i_za_springa',i.[Password]),2) ,
+    CONVERT(varbinary(max),EncryptByPassPhrase('cat_on_keyboard',i.[Password]),2) ,
     i.FirstName,
     i.LastName,
     i.RoleID
